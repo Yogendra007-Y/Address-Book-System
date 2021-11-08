@@ -2,7 +2,7 @@ package com.Bridgelabz;
 import java.util.*;
 
 /**
- * Purpose - Ability to view person by city or state
+ * Purpose - Ability to get number of contact persons i.e. count by City or State
  * @author Yogendra Lalit Sharma
  */
 
@@ -14,7 +14,7 @@ public class AddressBookMain {
 
         while (true) {
             System.out.println("\nWelcome to Address Book System");
-            System.out.println("1. New Address Book \n2. Select Address Book \n3. Delete Address Book \n4. Search Contact Data \n5. Exit");
+            System.out.println("1. New Address Book \n2. Select Address Book \n3. Delete Address Book \n4. Search Contact Data \n5.View Contact Data \n6.Count Contacts \n7. Exit");
             System.out.print("Enter Your choice: ");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -53,6 +53,10 @@ public class AddressBookMain {
                     addressBook.viewByOption(addressBookMap);
                     break;
                 case 6:
+                    System.out.println("Welcome to the couter");
+                    addressBook.countByOption();
+                    break;
+                case 7:
                     sc.close();// for closing the programme
                     return;
                 default:
