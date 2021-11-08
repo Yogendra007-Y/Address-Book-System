@@ -2,7 +2,7 @@ package com.Bridgelabz;
 import java.util.*;
 
 /**
- * Purpose - Ability to search Person in a City or State across the multiple Address Book
+ * Purpose - Ability to view person by city or state
  * @author Yogendra Lalit Sharma
  */
 
@@ -49,6 +49,10 @@ public class AddressBookMain {
                     System.out.println("Welcome to the search option:");
                     addressBook.searchByOptions();
                 case 5:
+                    System.out.println("Welcome to view By Option:");
+                    addressBook.viewByOption(addressBookMap);
+                    break;
+                case 6:
                     sc.close();// for closing the programme
                     return;
                 default:
