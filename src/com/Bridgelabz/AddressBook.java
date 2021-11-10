@@ -22,8 +22,7 @@ public class AddressBook {
     }
 
     // method for search contact by name
-    public List<Contacts> searchByName(String name) {
-        // collection list of element
+    public List<Contacts> searchByName(String name) {// collection list of element
         // stream and lambda for find filter given name from arraylist
         return contactList.stream().filter(person -> person.getFirstName().equalsIgnoreCase(name))
                 .collect(Collectors.toList());
@@ -291,6 +290,9 @@ public class AddressBook {
                 AddressBook.sortBy(Contacts::getState).forEach(System.out::println);
                 break;
             case 5:
+                AddressBook.sortBy(Contacts::getZip).forEach(System.out::println);
+                break;
+            case 6:
                 return;
             default:
                 System.out.println("INVALID CHOICE!");
